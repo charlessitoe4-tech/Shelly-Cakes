@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Delícias da Ana — Bolos artesanais feitos com amor. Encomende já o seu!" />
+  <title>Shelly Cakes | Bolos Artesanais</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>" />
+
+  <!-- Evita flash de tema errado -->
+  <script>
+    (function () {
+      const temaSalvo = localStorage.getItem('tema');
+      const prefereEscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (temaSalvo === 'dark' || (!temaSalvo && prefereEscuro)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+       <img src="./images/logo shelly cakes.webp"alt="Shelly Cakes" class="logo-img" />
+</a>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato" class="btn-nav">Encomendar</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <span class="theme-icon">🌙</span>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Bolos artesanais feitos com <span>amor</span></h1>
+        <p>Transformamos ingredientes de qualidade em deliciosas experiências, com doces que encantam os olhos e conquistam o paladar</p>
+        <div class="hero-buttons">
+          <a href="#produtos" class="btn btn-primary">Ver Produtos</a>
+          <a href="#contato" class="btn btn-outline">Fazer Encomenda</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="./images/IMG-20250822-WA0030.jpg" alt="Bolo artesanal" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="container sobre-content">
+      <div class="sobre-image">
+        <img src="./images/IMG-20250822-WA0029.jpg" alt="Confeiteira preparando bolo" />
+      </div>
+      <div class="sobre-text">
+        <h2>Sobre a Shelly Cakes</h2>
+        <p>Há mais de 10 anos transformando momentos especiais em memórias doces. Cada bolo é feito sob encomenda, com ingredientes frescos e receitas que passam de geração em geração.</p>
+        <ul class="sobre-list">
+          <li>✅ Ingredientes escolhido com muito carinho</li>
+          <li>✅ Bolos personalizados para festas</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="produtos" id="produtos">
+    <div class="container">
+      <h2 class="section-title">Nossos Bolos</h2>
+      <p class="section-subtitle">Escolha o sabor perfeito para sua ocasião</p>
+
+      <div class="produtos-grid">
+        <div class="produto-card">
+          <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&auto=format&fit=crop" alt="Bolo de chocolate" />
+          <div class="produto-info">
+            <h3>Bolo caseiro de Chocolate</h3>
+            <p>Massa fofinha com recheio cremoso de brigadeiro</p>
+            <span class="preco">A partir de 800 MT</span>
+          </div>
+        </div>
+
+        <div class="produto-card">
+          <img src="./images/download (1).jpg" alt="Bolo de morango" />
+          <div class="produto-info">
+            <h3>Bolo Chiffon</h3>
+            <p>Massa branca com sabor a sua escolha</p>
+            <span class="preco">A partir de </span>
+          </div>
+        </div>
+
+        <div class="produto-card">
+          <img src="./images/740138520023152310.jpg" alt="Bolo de cenoura" />
+          <div class="produto-info">
+            <h3>Bolo Pão de Ló</h3>
+            <p>Clássico com cobertura de chocolate meio amargo</p>
+            <span class="preco">A partir de </span>
+          </div>
+        </div>
+
+        <div class="produto-card">
+          <img src="./images/408490628725497193.jpg" alt="Bolo red velvet" />
+          <div class="produto-info">
+            <h3>Bolo Red Velvet</h3>
+            <p>Massa vermelha com cream cheese premium</p>
+            <span class="preco">A partir de </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="galeria" id="galeria">
+    <div class="container">
+      <h2 class="section-title">Galeria</h2>
+      <p class="section-subtitle">Um pedacinho do que já criamos</p>
+      <div class="galeria-grid">
+        <img src="./images/IMG-20250822-WA0030.jpg" alt="Bolo decorado" />
+        <img src="./images/IMG-20250822-WA0031.jpg" alt="Bolo de festa" />
+        <img src="./images/IMG-20250822-WA0032.jpg" alt="Bolo de casamento" />
+        <img src="./images/IMG-20250822-WA0028.jpg" alt="Cupcakes" />
+        <img src="./images/d11d210c146e56ae42f3b87052c0343d.jpg" alt="Bolo naked" />
+        <img src="./images/WhatsApp Image 2026-11-10 at 09.36.01.jpeg" alt="Bolo Natal" />
+        <img src="./images/1118229782520289063.jpg" alt="Bolo de casamento elegante" />
+        <img src="./images/573927546286042602.jpg" alt="Bolo de aniversário" />
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="depoimentos" id="depoimentos">
+    <div class="container">
+      <h2 class="section-title">O que dizem nossos clientes</h2>
+      <div class="depoimentos-grid">
+        <div class="depoimento-card">
+          <p>"O bolo estava maravilhoso! Todo mundo pediu a receita. Super recomendo!"</p>
+          <span>— Mariana Silva</span>
+        </div>
+        <div class="depoimento-card">
+          <p>"Encomendei para o aniversário da minha filha e foi um sucesso. Atenção aos detalhes incrível!"</p>
+          <span>— Carlos Andrade</span>
+        </div>
+        <div class="depoimento-card">
+          <p>"Melhor bolo de chocolate que já comi na vida. A SHelly Cakes é uma artista!"</p>
+          <span>— Juliana Costa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato" id="contato">
+    <div class="container contato-content">
+      <div class="contato-info">
+        <h2>Faça sua Encomenda</h2>
+        <p>Preencha o formulário e entraremos em contato pelo WhatsApp em até 24h.</p>
+        <ul>
+          <li>📞 825971375</li>
+          <li>📍 Maputo </li>
+        </ul>
+      </div>
+
+      <form class="contato-form" id="formContato">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <input type="tel" name="telefone" placeholder="Seu telefone" required />
+        <select name="sabor" required>
+          <option value="">Escolha o sabor</option>
+          <option>Chocolate</option>
+          <option>Morango</option>
+          <option>Chiffon</option>
+          <option>Red Velvet</option>
+          <option>Personalizado</option>
+        </select>
+        <textarea name="mensagem" rows="4" placeholder="Conte-nos sobre sua encomenda..." required></textarea>
+        <button type="submit" class="btn btn-primary">Enviar Pedido</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Shelly Cakes. Feito com muito amor .</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
