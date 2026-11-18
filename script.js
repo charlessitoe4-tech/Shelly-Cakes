@@ -60,7 +60,7 @@ form.addEventListener('submit', (e) => {
     `*Sabor:* ${sabor}%0A` +
     `*Mensagem:* ${mensagem}`;
 
-  const numeroWhats = '+258825971375'; // ⚠️ ALTERE PARA SEU NÚMERO
+  const numeroWhats = '825971375'; // ⚠️ ALTERE PARA SEU NÚMERO
   const url = `https://wa.me/${numeroWhats}?text=${textoWhats}`;
 
   window.open(url, '_blank');
