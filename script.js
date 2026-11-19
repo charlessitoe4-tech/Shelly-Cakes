@@ -49,7 +49,7 @@ form.addEventListener('submit', (e) => {
   const nome = dados.get('nome');
   const email = dados.get('email');
   const telefone = dados.get('telefone');
-  const tipo de bolo = dados.get('Tipo de bolo');
+  const sabor = dados.get('sabor');
   const mensagem = dados.get('mensagem');
 
   const textoWhats =
