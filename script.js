@@ -57,7 +57,7 @@ form.addEventListener('submit', (e) => {
     `*Nome:* ${nome}%0A` +
     `*E-mail:* ${email}%0A` +
     `*Telefone:* ${telefone}%0A` +
-    `*:* ${sabor}%0A` +
+    `*T:* ${sabor}%0A` +
     `*Mensagem:* ${mensagem}`;
 
   const numeroWhats = '825971375'; // ⚠️ ALTERE PARA SEU NÚMERO
