@@ -1,0 +1,486 @@
+
+/* =========================================================
+   SHELLY CAKES — RESPONSIVIDADE
+   Ficheiro: mobile.css
+   ========================================================= */
+
+/* CONFIGURAÇÕES GERAIS */
+html {
+    overflow-x: hidden;
+    scroll-padding-top: 90px;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: min(92%, 1200px);
+}
+
+/* MENU HAMBURGER */
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    border: 1px solid var(--borda-input);
+    border-radius: 10px;
+    background: var(--fundo-card);
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 21px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--marrom);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* TABLETS E ECRÃS INTERMÉDIOS */
+@media (max-width: 900px) {
+
+    .hero-content,
+    .sobre-content,
+    .contato-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 680px;
+        margin-inline: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: min(100%, 560px);
+        margin-inline: auto;
+    }
+
+    .sobre-image {
+        width: min(100%, 650px);
+        margin-inline: auto;
+    }
+
+    .sobre-text {
+        max-width: 700px;
+        margin-inline: auto;
+    }
+
+    .contato-info {
+        max-width: 700px;
+    }
+
+    .contato-form {
+        width: 100%;
+    }
+}
+
+/* TELEMÓVEIS E TABLETS VERTICAIS */
+@media (max-width: 768px) {
+
+    html {
+        scroll-padding-top: 78px;
+    }
+
+    section {
+        padding: 3.25rem 0;
+    }
+
+    .container {
+        width: min(92%, 620px);
+    }
+
+    /* NAVBAR */
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .nav-container {
+        position: relative;
+        min-height: 68px;
+        gap: 0.65rem;
+    }
+
+    .logo {
+        min-width: 0;
+        margin-right: auto;
+    }
+
+    .logo-img {
+        height: clamp(38px, 8vw, 48px);
+        max-width: min(42vw, 155px);
+    }
+
+    .theme-toggle {
+        width: 38px;
+        height: 38px;
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-container nav {
+        position: static;
+    }
+
+    /* MENU MOBILE */
+    .nav-links {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: -4.35%;
+        right: -4.35%;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0.55rem 4.35% 1rem;
+        margin: 0;
+        background: var(--nav-mobile-bg);
+        box-shadow: 0 12px 18px rgba(0, 0, 0, 0.10);
+        border-top: 1px solid var(--borda-input);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition:
+            opacity 0.25s ease,
+            transform 0.25s ease,
+            visibility 0.25s ease,
+            background 0.3s ease;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 0.8rem 0.35rem;
+        text-align: center;
+        border-bottom: 1px solid var(--borda-input);
+    }
+
+    .nav-links li:last-child a {
+        border-bottom: 0;
+    }
+
+    .nav-links .btn-nav {
+        width: 100%;
+        margin-top: 0.65rem;
+        padding: 0.75rem 1rem;
+        border-radius: 12px;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 3.25rem 0;
+    }
+
+    .hero-content {
+        gap: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(2rem, 6vw, 2.65rem);
+        line-height: 1.15;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-height: 420px;
+        object-fit: cover;
+    }
+
+    /* SOBRE */
+    .sobre-content {
+        gap: 1.75rem;
+    }
+
+    .sobre-image img {
+        width: 100%;
+        max-height: 380px;
+        object-fit: cover;
+    }
+
+    .sobre-text h2,
+    .contato-info h2 {
+        font-size: clamp(1.75rem, 5vw, 2.1rem);
+    }
+
+    /* PRODUTOS */
+    .produtos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .produto-card {
+        min-width: 0;
+    }
+
+    .produto-card img {
+        height: clamp(145px, 28vw, 210px);
+    }
+
+    .produto-info {
+        padding: 1rem;
+    }
+
+    .produto-info h3 {
+        font-size: 1.05rem;
+        line-height: 1.3;
+    }
+
+    .produto-info p {
+        font-size: 0.9rem;
+    }
+
+    /* GALERIA */
+    .galeria-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
+
+    .galeria-grid img {
+        height: clamp(130px, 28vw, 200px);
+        border-radius: 12px;
+    }
+
+    /* DEPOIMENTOS */
+    .depoimentos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .depoimento-card {
+        padding: 1.25rem;
+    }
+
+    /* CONTACTO */
+    .contato-content {
+        gap: 1.75rem;
+    }
+
+    .contato-form {
+        padding: 1.4rem;
+    }
+
+    .contato-form input,
+    .contato-form select,
+    .contato-form textarea {
+        width: 100%;
+        min-width: 0;
+        font-size: 16px;
+    }
+
+    .contato-form button {
+        width: 100%;
+    }
+}
+
+/* TELEMÓVEIS */
+@media (max-width: 560px) {
+
+    section {
+        padding: 2.75rem 0;
+    }
+
+    .section-title {
+        font-size: clamp(1.65rem, 7vw, 1.9rem);
+    }
+
+    .section-subtitle {
+        margin-bottom: 2rem;
+        padding-inline: 0.25rem;
+        font-size: 0.92rem;
+    }
+
+    .hero {
+        padding: 2.7rem 0;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(1.85rem, 8vw, 2.3rem);
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        width: min(100%, 340px);
+        margin-inline: auto;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: min(100%, 420px);
+    }
+
+    /* PRODUTOS EM UMA COLUNA */
+    .produtos-grid,
+    .depoimentos-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .produto-card {
+        width: 100%;
+    }
+
+    .produto-card img {
+        height: clamp(190px, 58vw, 280px);
+    }
+
+    .produto-info {
+        padding: 1.15rem;
+    }
+
+    /* GALERIA */
+    .galeria-grid {
+        gap: 0.6rem;
+    }
+
+    .galeria-grid img {
+        height: clamp(125px, 38vw, 180px);
+    }
+
+    /* DEPOIMENTOS */
+    .depoimento-card {
+        padding: 1.35rem;
+    }
+
+    /* FORMULÁRIO */
+    .contato-form {
+        padding: 1.1rem;
+        border-radius: 16px;
+    }
+
+    .contato-form input,
+    .contato-form select,
+    .contato-form textarea {
+        padding: 0.85rem;
+    }
+
+    .contato-info li {
+        overflow-wrap: anywhere;
+        font-size: 0.93rem;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 1.25rem 0;
+        font-size: 0.85rem;
+    }
+}
+
+/* ECRÃS MUITO PEQUENOS: 320px–360px */
+@media (max-width: 360px) {
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .nav-container {
+        gap: 0.45rem;
+    }
+
+    .logo-img {
+        max-width: 125px;
+        height: 36px;
+    }
+
+    .theme-toggle,
+    .menu-toggle {
+        width: 35px;
+        height: 35px;
+    }
+
+    .menu-toggle {
+        padding: 6px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .galeria-grid {
+        gap: 0.45rem;
+    }
+
+    .galeria-grid img {
+        height: 120px;
+    }
+
+    .produto-info h3 {
+        font-size: 1rem;
+    }
+
+    .produto-info p {
+        font-size: 0.88rem;
+    }
+}
+
+/* DISPOSITIVOS SEM RATO */
+@media (hover: none) {
+
+    .produto-card:hover,
+    .galeria-grid img:hover,
+    .theme-toggle:hover {
+        transform: none;
+    }
+}
+
+/* ACESSIBILIDADE: REDUZIR ANIMAÇÕES */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
